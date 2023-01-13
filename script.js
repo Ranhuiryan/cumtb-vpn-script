@@ -4,15 +4,15 @@
 // @description  CUMTB VPN access for academic sites
 // @author       Ranhui@cumtb
 // @namespace    https://github.com/Ranhuiryan/cumtb-vpn-script
-// @match      *sciencedirect.com/*
-// @match      *cnki.net/*
-// @match      *springer.com/*
-// @match      *nature.com/*
-// @match      *ieee.org/*
-// @match      *science.org/*
-// @match      *wiley.com/*
-// @match      *tandfonline.com/*
-// @match      *wanfangdata.com.cn/*
+// @include      *sciencedirect.com/*
+// @include      *cnki.net/*
+// @include      *springer.com/*
+// @include      *nature.com/*
+// @include      *ieee.org/*
+// @include      *science.org/*
+// @include      *wiley.com/*
+// @include      *tandfonline.com/*
+// @include      *wanfangdata.com.cn/*
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
