@@ -16,8 +16,8 @@
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
-var vpnurl = "vpn.cumtb.edu.cn"
-var vpnport = 8118
+var vpnHost = "vpn.cumtb.edu.cn"
+var vpnPort = 8118
 
 //Create a new URL object from the current page's URL
 var url = new URL(location.href);
@@ -27,21 +27,21 @@ window.stop(); //Stop loading the current page
 if (url.protocol === "http:") {
   url.protocol = "https:"
   if (url.port !== "") {
-    // Set the hostname to the current hostname + port + vpnurl
-    url.hostname = url.hostname.replace(/\./g, "-") + "-" + url.port + "-p." + vpnurl;
+    // Set the hostname to the current hostname + port + vpnHost
+    url.hostname = url.hostname.replace(/\./g, "-") + "-" + url.port + "-p." + vpnHost;
   } else {
-    // Set the hostname to the current hostname + vpnurl
-    url.hostname = url.hostname.replace(/\./g, "-") + "." + vpnurl;
+    // Set the hostname to the current hostname + vpnHost
+    url.hostname = url.hostname.replace(/\./g, "-") + "." + vpnHost;
   }
 } else if (url.protocol === "https:") {
   if (url.port !== "") {
-    // Set the hostname to the current hostname + "-s" + port + "-p." + vpnurl
-    url.hostname = url.hostname.replace(/\./g, "-") + "-s" + "-" + url.port + "-p." + vpnurl;
+    // Set the hostname to the current hostname + "-s-" + port + "-p." + vpnHost
+    url.hostname = url.hostname.replace(/\./g, "-") + "-s-" + url.port + "-p." + vpnHost;
   } else {
-    // Set the hostname to the current hostname + "-s." + vpnurl
-    url.hostname = url.hostname.replace(/\./g, "-") + "-s." + vpnurl;
+    // Set the hostname to the current hostname + "-s." + vpnHost
+    url.hostname = url.hostname.replace(/\./g, "-") + "-s." + vpnHost;
   }
 }
 
-url.port = vpnport;
+url.port = vpnPort;
 location.assign(url.href); //Redirect to the new page
