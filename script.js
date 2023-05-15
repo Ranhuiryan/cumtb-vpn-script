@@ -12,7 +12,12 @@
 // @include      *science.org/*
 // @include      *wiley.com/*
 // @include      *tandfonline.com/*
+// @include      *spiedigitallibrary.org/*
 // @include      *wanfangdata.com.cn/*
+// @include      *peixun.cumtb.edu.cn/*
+// @include      *zhdj.cumtb.edu.cn/*
+// @include      *ingentaconnect.com/*
+// @include      *ascelibrary.org/*
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
